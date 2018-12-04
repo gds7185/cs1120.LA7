@@ -1,6 +1,6 @@
 package edu.wmich.cs1120.LA7;
 
-public interface INode {
+public interface INode<E> {
 	// Returns the data stored in this node.
 	E getData();
 	// Returns the node next to this node.
