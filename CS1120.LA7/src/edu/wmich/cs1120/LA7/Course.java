@@ -8,7 +8,16 @@ public class Course implements ICourse {
 	@Override
 	public boolean isFull() {
 		// TODO Auto-generated method stub
+		int maxVal = 0; 
+		//Here we need to change this so that maxVal is equal to the class capacity
+		//
+		//
+		//
+		//
 		
+		if (stu.size() == maxVal) {
+			return true;
+		}
 		return false;
 	}
 
@@ -21,8 +30,8 @@ public class Course implements ICourse {
 	@Override
 	public void printClassList() {
 		// TODO Auto-generated method stub
-		while (stu.headCopy.getNext()!= null) {
-			System.out.println(stu.headCopy.getNext());
+		while (stu.head.getNext()!= null) {
+			System.out.println(stu.head.getNext());
 		}
 	}
 	@Override

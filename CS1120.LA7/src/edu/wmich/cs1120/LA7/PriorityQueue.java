@@ -11,26 +11,35 @@ public class PriorityQueue<E> {
 		}
 		return false;
 	}
-//Add object received to the priority queue taking into consideration the rules governing priority.
+	
+	//Add object received to the priority queue taking into consideration the rules governing priority.
 	public void enqueue(E data) {
-	list.add(data);
+		list.add(data);
 	}
-//Remove the next object to be processed from the priority queue.
+	
+	//Remove the next object to be processed from the priority queue.
 	public E dequeue() {
 		if (list.isEmpty()) {
 	        return null;
 	    }
-		Node<E> object = list.headCopy.getNext();
-		E obj = object.getData();
-	    return obj;		
+		else {
+			E object = list.head.getNext().getData();
+	    	return object;
+		}
 	}
+	
 //Print the contents of the queue 
 	public void Qprint() {
-		System.out.println("The contents of the Queue: ");
-		while (list.headCopy.getNext() != null) {
-			System.out.println(list.headCopy.getNext());
+		if(isEmpty() != true) {
+			System.out.println("The contents of the Queue: ");
+			while (list.head.getNext() != null) {
+				System.out.println(list.head.getNext());
+			}
+			System.out.println("End of Queue");
 		}
-		System.out.println("End of Queue");
+		else {
+			System.out.println("The Queue is empty.");
+		}
 	} 
 	
 	
